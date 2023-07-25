@@ -23,5 +23,10 @@ font-style<br>
 font-weight<br>
 overflow<br>
 :hover<br>
+background-image<br>
+background-size<br>
+baclground-clip<br>
+text-shadow:OOOcolor,XXXcolor;<br>
+text-indent<br>
 
 
