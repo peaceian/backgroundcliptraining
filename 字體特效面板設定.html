@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>background-clip:text</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Mochiy+Pop+One&display=swap');/*must be on the top ! it is needed the first on the top but not limiting another @import.*/
+        
+        p.abstract::first-line {color:#ff0000;}
+        p.abstract::first-letter {color: #ff0000;font-size: 200%;}
+        h1.abstract::first-letter {color: #ff0000;font-size: 200%;}
+        h1.intro::first-letter {color: #ff0000;font-size: 200%;}
+        h1.materialmethods::first-letter {color: #ff0000;font-size: 200%;}
+
+        body {width:1500px;margin: 0 auto;background-color:lightgray;background-color:darksalmon;background-size: 3%;background-blend-mode: overlay;}
+
+        nav {margin: 0 auto;box-sizing: border-box;position: sticky;top: 0px;}/*position effect*/
+        li {border-radius: 5px;background-color:coral ;float: left;display: block;text-decoration: none;list-style-type:none;max-width: fit-content;}
+        li a {padding: 10px 20px;text-decoration: none;word-spacing: 10px;width: auto;} 
+
+
+
+
+        h1, pre, p, h2, nav {font-family: 'Mochiy Pop One', sans-serif;font-variant:small-caps;}
+        p {padding: 10px;margin: 10px;font-style:oblique;width: 90%;font-weight: bold;overflow:auto    ;height: 200px;}
+
+        p:hover {padding: 10px;margin: 10px;font-style:oblique;width: 90%;font-weight: bold;background-image: url(./kingdomheartsbg1.png);background-size: 3%;border-radius: 30px;background-clip: content-box;}
+
+        p.abstract {text-align:justify; }
+        
+        h1.abstract, h1.intro, h1.materialmethods, h2.intro ,h2.materialmethods,h2{width: 1200px;margin: 0 auto;background-image: url("kingdomheartsbg1.png");font-size: 200%;background-size: 3%;background-clip: text ;-webkit-background-clip: text;color:transparent;}/*embossed effect*/
+        p.abstract, p.intro,p.materialmethods {width: 1200px;margin: 0 auto;text-shadow: 1px 1px white, -1px -1px black;color:linen; }/*contour effect*/
+        p.keyword {width: 1200px;margin: 0 auto;text-shadow: 0 0 5px yellow;color: hotpink;line-height: 2.0;word-spacing: 5px;white-space:normal ;text-indent: 2em;}/*neon effect*/
+
+        h1.title {padding-left: 50px ;font-size: 200% ;background-color:darkblue ;background-image: url("kingdomheartsbg1.png");background-size: 10%
+        ;background-blend-mode:difference;mix-blend-mode: overlay;color: white;border-radius: 20px;}/*webkit for chrome and safari; background-clip for IE*/
+        
+        
+        
+
+    </style>
+    <!--<link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Mochiy+Pop+One&display=swap" rel="stylesheet">-->
+    <!--font link needs be in the <head></head>-->
+
+</head>
+<body>
+    <nav>
+        
+        <li><a href="#title">Title</a></li>
+        <li><a href="#abstract">Abstract</a></li>
+        <li><a href="#intro">Introduction</a></li>
+        <li><a href="#materialmethods">Material and Methods</a></li>
+    </nav>
+    <br>
+    <article>
+    <h1 class="title" id="title">Investigation of anti-hepatocellular carcinoma agent, Chinese Herbal Medicine M1</h1>
+    <h1 class="abstract" id="abstract">Abstract</h1>
+    <p class="abstract" >
+        Hepatocellular Carcinoma (HCC) is one of higher malignant in cancers of human in the world. In addition, 
+    HCC mortality rate for 20 years is the leading cause of cancer death in Taiwan. The primary carcinogenic factors 
+    includes hepatitis virus infection and other are caused by alcohol abuse, and ingestion of carcinogen such as aflatoxin, etc.
+     HCC has the characteristics of high level metastasis, angiogenesis, and recurrence after surgery.
+    
+        In this study, we focused on how to effectively prevent metastasis and angiogenesis of HCC. Recently, it becomes important to use the Chinese Herbal
+       Medicine (CHM) as a therapeutic strategy for the treatment of diseases. Here, we found that among 10 kinds of CHMs, 
+       M1 could inhibit the cell migration at the dose less than half concentration of IC<sub>50</sub> (the half maximal inhibitory of 
+       concentration). M1 significantly inhibited the expression of Receptor Tyrosine Kinase, Epidermal Growth Factor Receptor (EGFR)
+       , and downstream, Ras, ERK, and Snail. Furthermore, another downstream pathway protein, Protein Kinase B (AKT), mammalian target 
+       of rapamycin (mTOR), Hypoxia-inducible factor 1-alpha (HIF1-α), and Vascular Endothelial Growth Factor A (VEGFA) were also 
+       inhibited. And the Matrix Metalloproteinases (MMPs), including MMP-2, MMP-9, which play an important role in metastasis 
+       mechanism, were also inhibited by M1. Epithelial–mesenchymal transition (EMT) markers, such as E-cadherin and N-cadherin, 
+       were effective altered by M1 treatment.
+     In the xenograft mice model, we observed the tumors growth sizes, weight, and protein
+        expressions were effectively inhibited by M1. In conclusions, we demonstrate that M1 has an inhibitory effect to suppress 
+        angiogenesis and metastasis of HCC in vitro and in vivo.</p>
+    <p class="keyword">Key Word: Hepatocellular Carcinoma, Chinese Herbal Medicine, Angiogenesis, Metastasis, EGFR, MMPs</p>
+    <h1 class="intro" id="intro">Introduction</h1>
+    <h2 class="intro">1. Hepatocellular carcinoma (HCC)</h2>
+    <p class="intro">
+        HCC has a high prevalence in Asia and North Africa because of the high frequency of chronic hepatitis B virus and hepatitis C virus 
+        infections in these areas<sup>1-3</sup>. Furthermore, uptake of aflatoxin, alcohol abuse, diabetes, obesity, and metabolic disorders are also 
+        the key risk factors<sup>1,3,4</sup>. The radical therapy is usually used to treat HCC in early-stage, but the occurrence and the metastasis cause 
+        the poor prognosis<sup>2-5</sup>. In recent years, sorafenib is the first molecule drug to show clinical application for liver cancer<sup>2</sup>. 
+        However, sorafenib has a count of restrictions, including the development of resistance and adverse effects<sup>6</sup>.
+    </p>
+    <h2>2. Epidermal growth factor receptor (EGFR)</h2>
+    <p class="intro">
+        Overexpression of EGFR is associated with liver cirrhosis and HCC<sup>7</sup>, and the high expression of EGER has been implicated in HCC-related 
+        tumor metastasis and poor patient survival<sup>7-9</sup>. Furthermore, the activation of EGFR causes the activation of downstream effectors, such 
+        as the Protein Kinase B (PKB, as known as AKT)/mammalian target of rapamycin (mTOR) pathway and Rat sarcoma (Ras)/extracellular 
+        signal–regulated kinases (Ras/ERK) pathway<sup>10,11</sup>. In clinical trials, gefitinib has been demonstrated discouraged results, so that the 
+        investigations of effective inhibitors of EGFR have been emerged as the current trend<sup>8</sup>.
+    </p>
+    <h2>3. Angiogenesis</h2>
+    <p class="intro">
+        Vascular Endothelial Growth Factors (VEGFs) play important roles in angiogenesis in cancers, and VEGF-A is a major member in VEGFs family that 
+        binds to VEGF receptors of the cell membrane to stimulate downstream streams<sup>12-17</sup>. For example, the activation of downstream effectors 
+        including AKT, mTOR, 4E-binding protein 1 (4EBP1), and Hypoxia-inducible factor 1-alpha (HIF1-α), regulates angiogenesis, migration, and invasion 
+        of tumor cells<sup>13,16,18-20</sup>. In addition, Matrix metalloproteinases (MMPs), have influences on matrix degradation, invasion, metastasis,
+         and cause angiogenesis during tumor progression<sub>13,15,18</sub>. Therefore, VEGFs and MMPs could be the targets to reduce the
+         angiogenesis<sup>13,19</sup>.
+    </p>
+    <h2>4. Epithelial–mesenchymal transition (EMT) / Metastasis</h2>
+    <p class="intro">
+        EMT has been reported in various cancer progressions, such as tumor growth, invasion, and metastasis<sup>21-24</sup>. The features of EMT are the 
+        disruption of intercellular contacts, matrix remodeling, invasion and migration through altering the cell-cell adhesion<sup>21,24,25</sup>. Ras/ERK 
+        pathway is the main mediator arising migration of tumor cells through the suppression of E-cadherin, a calcium dependent cell-cell adhesion molecule 
+        that plays a critical role in keeping epithelial cell feature, but the upregulation of N-cadherin, which is the marker of mesenchymal type cells
+        <sup>21,22,24,26</sup>. Furthermore, the high expression of snail downregulates epithelial genes but activates mesenchymal genes to induce the 
+        transformation of cell<sup>25</sup>. Similarly, MMPs also promote the metastasis process though degrading the ECM leading to the mesenchymal-type 
+        cells migration<sup>21,23</sup>. Therefore, it is important to suppress metastasis by inhibiting EMT and MMPs to reach an effective anti-cancer 
+        strategy.
+    </p>
+    <h2>5. Chinese Herbal Medicines (CHMs)</h2>
+    <p class="intro">
+        CHMs are known to mitigate clinical symptoms, prevent metastasis as well as recurrence, and delay progression of tumors<sup>27</sup>. For example,
+         curcumin, the active principle of <u>Curcuma longa</u>, has multiple functions such as antioxidant, anti-inflammatory, and anti-carcinogenic activities 
+         that inhibit the cell proliferation, cell cycle and apoptosis<sup>28</sup>. <u>Songyou Yin</u> possesses anti-metastatic activity by inhibiting
+          the expressions of MMP-2 and VEGFs<sup>29</sup>. Additionally, <u>Coptidis Rhizoma</u> inhibits tumor cell migration through reducing F-actin 
+          polymerization<sup>30</sup>. Therefore, researches on CHMs toward cancer therapy have attracted much attention to develop as an alternative
+           therapeutic strategy.
+    </p>
+    <h2>6. HCC Huh-7 cell line</h2>
+    <p class="intro">
+       <u> P53 </u> mutation is a carcinogenesis important factor<sup>31</sup>. Huh-7 cell line, a well-differential hepatocellular carcinoma, has a <u>p53</u> 
+       gene mutation at codon 220 (A:T→G:C) from a 57 years old male in Japan<sup>6</sup>. Huh-7 cells do not have virus DNA so that the virus interference 
+       can be removed, and have been used for the liver cancer study<sup>6</sup>.
+    </p>
+    <h2>7. Research objectives of present investigation</h2>
+    <p class="intro">
+        In this study, we purposed to identify effective CHMs that could inhibit the liver tumor growth, such as migration, EMT, proliferation, and angiogenesis.
+         Using IC<sub>50 MTT</sub>/ IC<sub>50 wound healing</sub> ratio, we selected the most effective one from 10 kinds of CHMs. <i>In vitro</i>, the liver 
+         cancer proteins, EGFR and downstream pathways such as AKT and ERK signalings were determined. <i>In vivo</i>, mice xenograft models and the tumors marker 
+         were examined to demonstrate the anti-cancer ability of CHM.
+    </p>
+    <h1 class="materialmethods" id="materialmethods">Materials and Methods</h1>
+    <h2 class="materialmethods">1. Materials</h2>
+    <p class="materialmethods">
+        3-(4, 5-dimethylthiazol-2-yl) 2, 5-diphenyltetrazolum bromide (MTT) was bought from Sigma-Aldrich. Fetal Bovine Serum (FBS) was from Biological 
+        industries. 0.5% Trypsin-EDTA, and penicillin/streptomycin were purchased from Invitrogen Co. BCA protein Assay Kit was bought from Thermo Fisher 
+        scientific Inc. Matrigel was obtained from BD Biosciences. CHM was supplied by Sun Ten Pharmaceutical Co., Ltd. p-EGFR(Try1068), EGFR, p-AKT(Ser473), 
+        AKT, p-mTOR(Ser2448), mTOR, HIF-1α, Snail, MMP-2, MMP-9, Ras, ERK, p-ERK(Thr202/Tyr204), p-4EBP1(Thr37/46), and 4EBP1 antibodies were bought from Cell 
+        Signaling Technology. Fibronectin, E-cadherin, N-cadherin, Vimentin, Fibronectin, VEGRA, Actin, Rac1, Cdc42, RhoA, horseradish peroxidase 
+        (HRP)-conjugated goat anti-rabbit, anti-mouse, and anti-goat secondary antibodies were purchased from Santa Cruz Technology. GST-PBD 
+        (Glutathione S-transferase-Rac1/Cdc42 binding domain) and GST-RBD (Glutathione S-transferase-Rho binding domain) plasmids were kindly provided by 
+        Professor Zee-Fen Chang, College of Medicine, National Taiwan University.
+    </p>
+    <h2 class="materialmethods">2. Preparation of CHM</h2>
+    <p class="materialmethods">
+        CHM extracts were supplied by Sun-Ten Pharmaceutical Co., Ltd (Taipei, Taiwan). One hundred gram of CHM was boiled with 1.5 liter of water for 1 hr
+        , and the extracts were condensed to 200 ml with the rotary evaporator, resulting in the final concentration of aqueous extracts of the CHM was 1 g/ml.
+    </p>
+    <h2 class="materialmethods">3. Cell culture</h2>
+    <p class="materialmethods">
+        Huh7 cells were cultured in Dulbecco’s Modified Eagle Medium (DMEM) with 10% FBS and 1% penicillin. Cells were maintained in humidified 
+        atmosphere containing 5% CO<sub>2</sub>, at 37℃, and passaged while reaching 80 % to 90 % confluent.
+    </p>
+    <h2 class="materialmethods">4. Cell viability</h2>
+    <p class="materialmethods">
+        Huh7 cells (5 * 10<sup>3</sup>) were seeded in 96-well plate overnight and then treated various concentrations of CHM extracts for 24 hr. 
+        The culture medium with MTT (0.5 mg/ml) was supplied for 3 hr, and then 100 μl SDS solution (10% SDS, 0.01N HCl) was added. The absorbance was 
+        measured at 570 nm with an ELISA reader (uQuant, bio-tec Inc., Vermont, USA). 
+        Cell viability (%) = [the means of experiment wells (OD<sub>570</sub>) / the means of control wells (OD<sub>570</sub>)]*100%.
+    </p>
+    <h2 class="materialmethods">5. Wound healing assay</h2>
+    <p class="materialmethods">
+        Huh7 cells (3 * 10<sup>5</sup>) were seeded in 6-well plate and incubated overnight, and then a straight wound was scratched with a pipette tip. 
+        Cells were treated with various concentrations of the M1 for 0, 24, and 48 hr, and the wound images were taken with a microscope charge-coupled 
+        device camera Nikon (DS-Ril). Cell migration was quantified by comparing the degree of wound healing.
+    </p>
+    <h2 class="materialmethods">6. Cell migration assay</h2>
+    <p class="materialmethods">
+        Huh7 cells (5 * 10<sup>4</sup>) were seeded in the upper compartment of Boyden transwell chamber with 300 μl serum-free DMEM containing various 
+        concentrations of the M1, and then the chambers were transferred to the 24-well plate with 700 μl DMEM containing 10% FBS along with various 
+        concentrations of the M1. After the incubation for 24 hr, the cells were fixed with 4% formaldehyde for 10 mins, and then stained with crystal 
+        violet for 30 mins. The cells on the upper chambers were removed, and migrated cells were captured with a microscope and analyzed using the ImageJ 
+        software.
+    </p>
+    <h2 class="materialmethods">7. Gelatin zymography assay</h2>
+    <p class="materialmethods">
+        Sodium dodecyl sulfate polyacrylamide gel electrophoresis (SDS-PAGE) gels (10%) containing 0.1% gelatin were prepared. Samples and 
+        2x Sample Buffer (12.5% Tris-HCl, 20% Glycerol, 4% SDS, 0.5% Bromophenol Blue) were mixed completely and incubated for 10 mins. The samples were 
+        loaded onto the gels and then separated by SDS-PAGE. The gels were incubated in the Zymogram Renaturing Buffer (2.5% Triton X-100 in 1 liter) 
+        for 10 mins, and then incubated with Zymogram Developing Buffer (0.1 M Tris Base, 0.5 M Tris-HCl, 0.5 M NaCl, 0.07 M CaCl<sub>2</sub>, 0.6 M Triton X-100) 
+        with gently shaking for 20 mins. Afterward, the gels were stained with Coomassie Blue R250, and de-stained with solution (Methanol: Acetic Acid: 
+        Water = 4:1:5) until the clear bands appeared<sup>32</sup>. The intensives of bands on the gels were quantified with an ImageQustTMLAS-4000 
+        (Fujifilm Co., Tokyo, Japan) and ImageJ software.
+    </p>
+    </article>
+</body>
+</html>
